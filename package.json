@@ -3,7 +3,8 @@
 	"scripts": {
 		"postinstall": "cd desk && yarn install",
 		"dev": "cd desk && yarn dev",
-		"build": "cd desk && yarn build",
+        	"build": "cd desk && vite build --base=/assets/helpdesk/desk/",
+        	"copy-html-entry": "cp helpdesk/public/desk/index.html helpdesk/www/helpdesk/index.html",
 		"disable-workspaces": "sed -i '' 's/\"workspaces\"/\"aworkspaces\"/g' package.json",
         "enable-workspaces": "sed -i '' 's/\"aworkspaces\"/\"workspaces\"/g' package.json && rm -rf node_modules ./desk/node_modules/ frappe-ui/node_modules/ && yarn install"
 	},
